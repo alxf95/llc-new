@@ -1,2 +1,23 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div id="home-banner">
+  <div class="container">
+    <div class="home-banner-content">
+      <div class="row flexbox-row">
+        <div class="col-xs-12 col-sm-6" id="home-banner-left">
+          <span id="typed"></span>
+          <div id="banner-sign-up">
+            <% unless user_signed_in? %>
+              <a type="button" class="llc-button" data-toggle="modal" data-target="#llcModalSignup">Sign Up</a>
+            <% end %>
+          </div>
+        </div>
+        <div class="col-xs-12 col-sm-6">
+          <%= image_tag "coloured-map-pins.png", id: "map-home" %>
+        </div>
+      </div>
+      <div class="arrow-container bounce">
+        <%= image_tag "down-arrow.png", id: "arrow" %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="anchor" id="arrow-scroll-anchor"></div>

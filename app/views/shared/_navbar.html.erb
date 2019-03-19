@@ -1,35 +1,87 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
+<div class="navbar">
+  <!-- Logo -->
+  <%= link_to "LLC", root_path, id: "navbar-home" %>
+  <!-- Right Navigation -->
+  <div class="navbar-right hidden-xs">
+    <div class="dropdown">
+      <p class="navbar-link navbar-item">Courses</p>
+      <div class="courses-dropdown-content">
+        <a href="/languages/1">Arabic</a>
+        <a href="/languages/2">Urdu</a>
+      </div>
+    </div>
+    <!-- <a class="navbar-item navbar-link" id="courses-link">Courses</a> -->
+    <a href="/about" class="navbar-item navbar-link" id="about-link">About Us</a>
+    <a class="navbar-item navbar-link" id="contact-link">Contact</a>
+    <% if user_signed_in? %>
+      <%= link_to destroy_user_session_path, method: :delete, id:"sign-out-link" do %>
+        <p class="navbar-item navbar-link">Sign out</p>
       <% end %>
-    </ul>
+    <% else %>
+      <a class="navbar-item navbar-link" id="login-link" type="button" data-toggle="modal" data-target="#llcModalLogin">Log in</a>
+    <% end %>
+  </div>
+  <!-- Dropdown appearing on mobile only -->
+
+  <div class="navbar-item hidden-sm-up navbar-dropdown">
+    <div class="dropdown">
+      <i class="fas fa-bars dropdown-toggle bars-dropdown" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      </i>
+      <ul class="dropdown-menu dropdown-menu-right navbar-dropdown-menu" aria-labelled-by="dropdownMenuButton">
+        <li><a class="dropdown-item" id="oaaat-link-dropdown">Courses</a></li>
+        <li><a class="dropdown-item" id="media-link-dropdown">About</a></li>
+        <li><a class="dropdown-item" id="contact-link-dropdown">Contact</a></li>
+        <% unless user_signed_in? %>
+          <li><a class="dropdown-item" id="about-link-dropdown" type="button" data-toggle="modal" data-target="#llcModalLogin">Log in</a></li>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
+<!-- Login modal -->
+
+<div class="modal fade" id="llcModalLogin" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered llc-modal-dialog" role="document">
+    <div class="modal-content" id="llc-modal-login-content">
+      <div class="modal-body llc-modal-body">
+        <h3 class="modal-title llc-modal-title" id="llcModalLoginTitle">Log In</h3>
+        <button type="button" class="close cross" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <%= simple_form_for(:user, as: :user, url: session_path(:user)) do |f| %>
+
+        <div class="form-inputs modal-form-inputs">
+          <div class="custom-form-group">
+            <%= f.input :email,
+                               required: true,
+                               autofocus: true,
+                               label: "Email",
+                               label_html: { class: "form-label" },
+                               input_html: { autocomplete: "email", class: "form-input" } %>
+          </div>
+          <div class="custom-form-group">
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        label: "Password",
+                        label_html: { class: "form-label" },
+                        input_html: { autocomplete: "new-password", class: "form-input"  } %>
+          </div>
+        <div class="form-actions flexbox-column">
+          <%= f.button :submit, "Log in", class: "llc-button modal-button" %>
+        </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<%= content_for :after_js do %>
+  <script>
+    $('#llcModalLogin').on('shown.bs.modal', function () {
+      $('#myInput').trigger('focus')
+    })
+  </script>
+<% end %>
