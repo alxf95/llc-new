@@ -1,0 +1,16 @@
+.llc-button {
+  font-weight: lighter;
+  font-family: "Krub";
+  letter-spacing: 2px;
+  color: white !important;
+  font-size: 16px;
+  background-color: $red;
+  padding: 10px 30px;
+  border-radius: 1px;
+  cursor: pointer;
+  &:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #d2414d;
+  }
+}

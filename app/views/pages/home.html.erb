@@ -6,7 +6,7 @@
           <span id="typed"></span>
           <div id="banner-sign-up">
             <% unless user_signed_in? %>
-              <a type="button" class="llc-button" data-toggle="modal" data-target="#llcModalSignup">Sign Up</a>
+              <a class="llc-button" data-toggle="modal" data-target="#llcModalSignup">Sign Up</a>
             <% end %>
           </div>
         </div>
@@ -21,3 +21,12 @@
   </div>
 </div>
 <div class="anchor" id="arrow-scroll-anchor"></div>
+
+<script>
+  const typed = new Typed('#typed',{
+      strings: ['Learn a language from a local expert', 'Redistribute wealth to a local expert', 'Learn a language from a local expert'],
+      backSpeed: 30,
+      typeSpeed: 40,
+      backDelay: 1500,
+  });
+</script>

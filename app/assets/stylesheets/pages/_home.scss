@@ -3,15 +3,19 @@
 // Specific CSS for your home-page
 #home-banner {
   background-color: $app-white;
-  min-height: 100vh;
   color: $gray;
   position: relative;
 }
 
 .home-banner-content {
-  min-height: 100vh;
+  min-height: calc(100vh - 64px);
   display: flex;
   align-items: center;
+}
+
+.home-banner-left {
+  display: flex;
+  flex-direction: column;
 }
 
 #banner-sign-up {
@@ -25,7 +29,9 @@
 }
 
 #typed {
-  font-size: 50px;
+  font-family: "Krub";
+  font-weight: 500;
+  font-size: 22px;
   letter-spacing: 1.5px;
 }
 
@@ -34,23 +40,6 @@
   margin: 1.5px;
   position: relative;
   top: 2px;
-}
-
-#about-us-banner-div {
-  display: flex;
-  justify-content: center;
-  position: absolute;
-  bottom: 78px;
-  right: 0;
-  left: 0;
-}
-
-#about-us-banner {
-  text-align: center;
-  margin: 0;
-  font-size: 17px;
-  letter-spacing: 1px;
-  cursor: pointer;
 }
 
 .arrow-container {
