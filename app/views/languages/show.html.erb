@@ -1,0 +1,54 @@
+<div class="languages-page">
+  <div class="container">
+    <div class="home-container">
+      <h1 id="languages-header"><%= @language.name.upcase %></h1>
+      <p id="language-top-description">Thanks for expressing an interest in learning Arabic with the London Learning Cooperative. The course is unique as it is taught directly from Palestinian tutors living in Gaza.</p>
+      <% if @language.name == "Arabic" %>
+        <h4>Overview</h4>
+        <p>The course will teach Palestinian (Levantine) Arabic, a dialect spoken by over 30 million people across Palestine, Jordan, Syria and Lebanon. Its aims are to provide students with a thorough introduction to the language, covering essential working vocabulary and basic grammatical constructions. No prior knowledge of Arabic is needed. The course will be delivered over 10 skype sessions, with each class lasting for an hour and a half. Lessons can be weekly, fortnightly or more regularly - it’s up to you. Once the 10-week beginner course has finished we encourage you to continue learning with us.</p>
+        <h4>Why Gaza?</h4>
+        <p>The unemployment rate in Gaza is 44%. For young people, it is over 60%. We want to link excellent teachers in Gaza to students across the world to not only provide jobs, but also learn about Palestine, its history and most importantly its language. Being taught from Gaza, you will be learning Arabic within the context of the Palestinian struggle for freedom, forging links which we hope will further the internationalist solidarity movement.</p>
+        <h4>Who will teach the course?</h4>
+        <p>The unemployment rate in Gaza is 44%. For young people, it is over 60%. We want to link excellent teachers in Gaza to students across the world to not only provide jobs, but also learn about Palestine, its history and most importantly its language. Being taught from Gaza, you will be learning Arabic within the context of the Palestinian struggle for freedom, forging links which we hope will further the internationalist solidarity movement.</p>
+        <h4>Pricing</h4>
+        <p>LLC charges prices on a pay what you can afford basis. As a guide for how much you should be paying, we have devised a simple set of questions that take into account your income and wealth in order to suggest you an affordable price. We call these questions the wealth test. For whatever reason if you think this price is unfair, or if you don’t want to participate in the wealth test, we charge a standard rate of £17 per hour.<br><br>Almost all of this money goes on wages for our tutors, who are all paid the Living Wage of £12.70 per hour. We do this to make an important political point: that people everywhere should be paid an equal global wage.<br><br>Almost all of this money goes on wages for our tutors, who are all paid the Living Wage of £12.70 per hour. We do this to make an important political point: that people everywhere should be paid an equal global wage.<br><br>If you are interested in taking the course please email <span class="app-red-font">londonlearningcoop@gmail.com</span> and we will get back to you within the next business day.</p>
+      <% elsif @language.name == "Urdu" %>
+        <h4>Overview</h4>
+        <p>This course will be taught by an experienced Pakistani tutor living in Pakistan via Skype. Students will cover basic grammar and gain a working vocabulary and is open to beginner and intermediate Urdu speakers. The language is presented in an economic, historical and cultural context so that learners are able to appreciate such things as appropriateness, linguistic etiquette, and the legacy of relations between Britain and Pakistan.</p>
+        <h4>What is the course?</h4>
+        <p>Taught in English and Urdu, the course covers speaking, listening, reading and writing. Before beginning the course you will have a chance to discuss the syllabus in order to customise it to your own interests and needs. LLC provides resources that help you to keep up with your Urdu day to day and week to week. Below is a brief overview of the first 5 weeks of the syllabus:</p>
+        <div id="urdu-lists">
+          <h5>Week 1</h5>
+          <ul>
+            <li>Alphabet</li>
+            <li>Change in the shape of letters</li>
+            <li>Vocabulary</li>
+          </ul>
+          <h5>Week 2</h5>
+          <ul>
+            <li>Word formation</li>
+            <li>Basic questions</li>
+          </ul>
+          <h5>Week 3</h5>
+          <ul>
+            <li>Introduction to reading</li>
+            <li>Vocabulary through vowels</li>
+            <li>Questions and answers</li>
+          </ul>
+          <h5>Week 4</h5>
+          <ul>
+            <li>Book reading (For understanding and building vocabulary)</li>
+            <li>Verb tenses (using video)</li>
+            <li>Common spoken phrases</li>
+            <li>Questions and answers (continued)</li>
+          </ul>
+        </div>
+        <p>Weeks 5 to 10 will then build on the first four weeks, and the remainder of the syllabus will be developed in accordance with your individual needs and interests.</p>
+        <h4>Who will teach the course?</h4>
+        <p>Lessons are conducted one-to-one via Skype with Abdul Hameed, a teacher living in Hyderabad, Pakistan. Abdul has a MA from the University of Karachi. He has over three years’ experience tutoring students, in addition to one year teaching in a government elementary school. Abdul cares about improving people's basic rights to shelter, education, health and employment. His central philosophy is to care about humanity. Through his teaching, he aims to foster innovation, creativity, and entertainment.</p>
+        <h4>Why Urdu?</h4>
+        <p>Lessons are conducted one-to-one via Skype with Abdul Hameed, a teacher living in Hyderabad, Pakistan. Abdul has a MA from the University of Karachi. He has over three years’ experience tutoring students, in addition to one year teaching in a government elementary school. Abdul cares about improving people's basic rights to shelter, education, health and employment. His central philosophy is to care about humanity. Through his teaching, he aims to foster innovation, creativity, and entertainment.<br><br>If you are interested in taking the course please email <span class="app-red-font">londonlearningcoop@gmail.com</span> and we will get back to you within the next business day. </p>
+      <% end %>
+    </div>
+  </div>
+</div>

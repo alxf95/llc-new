@@ -95,7 +95,7 @@
   h4 {
     font-family: "Krub";
     margin: 50px 0px;
-    letter-spacing: 1.5px;
+    letter-spacing: 2px;
   }
   p {
     font-family: "Krub";
@@ -144,6 +144,7 @@
 }
 
 #our-courses-header {
+  font-family: "Raleway";
   font-size: 34px;
   text-align: center;
   margin: 50px 0;
@@ -153,6 +154,7 @@
 
 .language-home {
   h4 {
+    letter-spacing: 2px;
     font-weight: 600;
     margin: 50px 0;
   }
@@ -173,4 +175,40 @@
     text-decoration: none;
     color: #be3b45;
   }
+}
+
+// ABOUT
+
+#about-us-section {
+  background-color: #26547C;
+  color: white;
+  font-family: "Krub";
+  h4 {
+    margin: 50px 0px;
+    letter-spacing: 2px;
+  }
+  p {
+    margin: 0 30px 50px 30px;
+    letter-spacing: 1.5px;
+    line-height: 1.8;
+  }
+}
+
+#find-out-more-about-div {
+  display: flex;
+  justify-content: center;
+}
+
+#find-out-more-about {
+  color: $red;
+  font-weight: 500;
+  &:hover {
+    text-decoration: none;
+    color: #be3b45;
+  }
+}
+
+.app-red-font {
+  color: $red;
+  font-weight: 500;
 }

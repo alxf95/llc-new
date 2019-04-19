@@ -72,7 +72,7 @@
   letter-spacing: 1px;
   margin-top: 15px;
   background-color: white;
-  border-radius: 1px;
+  border-radius: 2px;
   box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
   border: solid 1px #E6E6E6;
   position: absolute;
@@ -83,13 +83,14 @@
 
 .courses-dropdown-content a {
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 400;
   color: $gray;
   padding: 8px 16px;
   text-decoration: none;
   display: block;
   &:hover {
     color: $red;
+    text-decoration: none;
   }
 }
 
@@ -134,8 +135,8 @@
 
 .navbar-dropdown-menu li > a {
   transition: color 0.3s ease;
-  font-weight: lighter !important;
-  color: #757880 !important;
+  font-weight: 400 !important;
+  color: $gray !important;
   font-size: 15px !important;
   line-height: 22px !important;
   padding: 10px 20px;
@@ -143,7 +144,7 @@
 
 .navbar-dropdown-menu li > a:hover {
   background: transparent !important;
-  color: black !important;
+  color: $red !important;
 }
 
 .navbar-dropdown-menu:before {
