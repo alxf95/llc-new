@@ -1,6 +1,8 @@
 <div class="navbar">
   <!-- Logo -->
-  <%= link_to "LLC", root_path, id: "navbar-home" %>
+  <%= link_to root_path, id: "navbar-home" do %>
+    <%= image_tag "llc-logo.png", id: "llc-logo" %>
+  <% end %>
   <!-- Right Navigation -->
   <div class="navbar-right hidden-xs-down">
     <div class="dropdown">
@@ -13,12 +15,14 @@
     <!-- <a class="navbar-item navbar-link" id="courses-link">Courses</a> -->
     <a href="/about" class="navbar-item navbar-link" id="about-link">About Us</a>
     <a class="navbar-item navbar-link" id="contact-link">Contact</a>
-    <% if user_signed_in? %>
-      <%= link_to destroy_user_session_path, method: :delete, id:"sign-out-link" do %>
-        <p class="navbar-item navbar-link">Sign out</p>
+    <% if false %>
+      <% if user_signed_in? %>
+        <%= link_to destroy_user_session_path, method: :delete, id:"sign-out-link" do %>
+          <p class="navbar-item navbar-link">Sign out</p>
+        <% end %>
+      <% else %>
+        <a class="navbar-item navbar-link" id="login-link" type="button" data-toggle="modal" data-target="#llcModalLogin">Log in</a>
       <% end %>
-    <% else %>
-      <a class="navbar-item navbar-link" id="login-link" type="button" data-toggle="modal" data-target="#llcModalLogin">Log in</a>
     <% end %>
   </div>
   <!-- Dropdown appearing on mobile only -->
@@ -31,8 +35,10 @@
         <li><a class="dropdown-item" id="oaaat-link-dropdown">Courses</a></li>
         <li><a class="dropdown-item" id="media-link-dropdown">About</a></li>
         <li><a class="dropdown-item" id="contact-link-dropdown">Contact</a></li>
-        <% unless user_signed_in? %>
-          <li><a class="dropdown-item" id="about-link-dropdown" type="button" data-toggle="modal" data-target="#llcModalLogin">Log in</a></li>
+        <% if false %>
+          <% unless user_signed_in? %>
+            <li><a class="dropdown-item" id="about-link-dropdown" type="button" data-toggle="modal" data-target="#llcModalLogin">Log in</a></li>
+          <% end %>
         <% end %>
       </div>
     </div>

@@ -1,6 +1,6 @@
 /* Main navbar */
 .navbar {
-  position: fixed;
+  position: fixed !important;
   background: transparent;
   box-shadow: none;
   transition: all 0.3s ease;
@@ -25,15 +25,11 @@
   }
 }
 
-#navbar-home {
-  font-size: 24px;
-  color: $gray;
+#llc-logo {
+  height: 40px;
   position: absolute;
   left: 55px;
-  &:hover {
-    color: $gray;
-    text-decoration: none;
-  }
+  top: 10px;
 }
 
 /* Right section */
@@ -44,6 +40,7 @@
   padding-right: 24px;
   position: absolute;
   right: 55px;
+  top: 12px;
 }
 
 /* Basic navbar item */

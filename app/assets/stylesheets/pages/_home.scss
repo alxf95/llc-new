@@ -1,6 +1,10 @@
 // BANNER
 
-// Specific CSS for your home-page
+.home-container {
+  padding: 60px 0;
+  margin: 0 16px;
+}
+
 #home-banner {
   background-color: $app-white;
   color: $gray;
@@ -8,14 +12,20 @@
 }
 
 .home-banner-content {
-  min-height: calc(100vh - 64px);
+  min-height: 100vh;
   display: flex;
   align-items: center;
 }
 
-.home-banner-left {
+#home-banner-left {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  #typed-div {
+    position: relative;
+    bottom: 40px;
+    width: 300%;
+  }
 }
 
 #banner-sign-up {
@@ -69,5 +79,98 @@
   }
   30%, 70% {
     transform: translateY(-20px);
+  }
+}
+#arrow-scroll-anchor {
+  position: relative;
+  bottom: 64px;
+}
+
+// TAGLINES
+
+#taglines-section {
+  background-color: #26547C;
+  color: white;
+  font-weight: lighter;
+  h4 {
+    font-family: "Krub";
+    margin: 50px 0px;
+    letter-spacing: 1.5px;
+  }
+  p {
+    font-family: "Krub";
+    margin: 20px 50px 60px 30px;
+    letter-spacing: 1.5px;
+    line-height: 1.8;
+    text-align: justify;
+  }
+}
+
+#learn-local-title {
+  margin-top: 20px !important;
+}
+
+#tagline-second-description {
+  margin-left: 60px !important;
+}
+
+#money-icon {
+  position: relative;
+  width: 200px;
+  top: -50px;
+}
+
+#learn-icon {
+  position: relative;
+  width: 210px;
+  top: 10px;
+  left: 50px;
+}
+
+#globe-icon {
+  position: relative;
+  width: 200px;
+  top: -30px
+}
+
+// LANGUAGES
+
+#languages-home-section {
+  background-color: $app-white;
+  font-family: "Krub";
+  color: $gray;
+  letter-spacing: 1.5px;
+  line-height: 1.8;
+}
+
+#our-courses-header {
+  font-size: 34px;
+  text-align: center;
+  margin: 50px 0;
+  letter-spacing: 12px;
+  font-weight: 700;
+}
+
+.language-home {
+  h4 {
+    font-weight: 600;
+    margin: 50px 0;
+  }
+  p {
+    margin: 20px 30px 20px 30px;
+  }
+}
+
+.language-home-description {
+  margin: 30px 0;
+}
+
+.find-out-more {
+  color: $red;
+  font-weight: 500;
+  margin-left: 30px;
+  &:hover {
+    text-decoration: none;
+    color: #be3b45;
   }
 }

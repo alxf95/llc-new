@@ -3,15 +3,19 @@
     <div class="home-banner-content">
       <div class="row flexbox-row">
         <div class="col-xs-12 col-sm-6" id="home-banner-left">
-          <span id="typed"></span>
+          <div id="typed-div">
+            <span id="typed"></span>
+          </div>
           <div id="banner-sign-up">
-            <% unless user_signed_in? %>
-              <a class="llc-button" data-toggle="modal" data-target="#llcModalSignup">Sign Up</a>
+            <% if false %>
+              <% unless user_signed_in? %>
+                <a class="llc-button" data-toggle="modal" data-target="#llcModalSignup">Sign Up</a>
+              <% end %>
             <% end %>
           </div>
         </div>
         <div class="col-xs-12 col-sm-6">
-          <%= image_tag "coloured-map-pins.png", id: "map-home" %>
+          <%= image_tag "coloured-map.png", id: "map-home" %>
         </div>
       </div>
       <div class="arrow-container bounce">
@@ -21,12 +25,59 @@
   </div>
 </div>
 <div class="anchor" id="arrow-scroll-anchor"></div>
-
-<script>
-  const typed = new Typed('#typed',{
-      strings: ['Learn a language from a local expert', 'Redistribute wealth to a local expert', 'Learn a language from a local expert'],
-      backSpeed: 30,
-      typeSpeed: 40,
-      backDelay: 1500,
-  });
-</script>
+<div id="taglines-section">
+  <div class="container">
+    <div class="home-container">
+      <div class="tagline-content">
+        <h4>Pay what you can afford tuition</h4>
+        <div class="row">
+          <div class="col-xs-12 col-md-9">
+            <p>LLC charges prices on a pay what you can afford basis. As a guide for how much you should pay, we have devised the wealth test. This is a simple set of questions that take into account your income and wealth to suggest you a fee that is affordable.</p>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <%= image_tag "money-bag-white.png", class: "tagline-icon", id: "money-icon" %>
+          </div>
+        </div>
+      </div>
+      <div class="tagline-content">
+        <h4 id="learn-local-title">Learn from a local</h4>
+        <div class="row">
+          <div class="col-xs-12 col-md-3">
+            <%= image_tag "learn-white.png", class: "tagline-icon", id: "learn-icon" %>
+          </div>
+          <div class="col-xs-12 col-md-9">
+            <p id="tagline-second-description">We pay everyone in the company the same wage of £12.70 per hour, no matter where they live in the world.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tagline-content">
+        <h4 id="global-wage-title">Pay a global equal wage</h4>
+        <div class="row">
+          <div class="col-xs-12 col-md-9">
+            <p>Learning a language is not just about rules and grammar. It’s also about understanding the culture, history and politics of the people you are going to communicate with. Whether it’s learning Arabic from Gaza or Urdu via Hydrebad, our lessons connect you directly to local tutors.</p>
+          </div>
+          <div class="col-xs-12 col-md-3">
+            <%= image_tag "white-globe.png", class: "tagline-icon", id: "globe-icon"%>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="languages-home-section">
+  <div class="container">
+    <div class="home-container">
+      <h4 id="our-courses-header">OUR COURSES</h4>
+      <div class="language-home">
+        <h4>Arabic</h4>
+        <p class="homepage-description language-home-description">This is the first course to be taught by Palestinian tutors living in Gaza for international students. The course will teach Palestinian (Levantine) Arabic, a dialect spoken by over 30 million people across Palestine, Jordan, Syria and Lebanon. Its aims are to provide students with a thorough introduction to the language, covering essential working vocabulary and basic grammatical constructions. No prior knowledge of Arabic is needed. The course will be delivered over 10 Skype sessions, with each class lasting for an hour and a half. Lessons can be weekly, fortnightly or more regularly.</p>
+        <a href="/languages/1" class="find-out-more">Find out more</a>
+      </div>
+      <div class="language-home">
+        <h4>Urdu</h4>
+        <p class="homepage-description language-home-description">Urdu is spoken by over 100 million people around the world, and is the official language of Pakistan. Its script is almost identical to the Persian and Arabic scripts, and it shares around 40% of the vocabulary from these languages  making it a useful gateway language to learn. <br><br>This course will be taught by an experienced Pakistani tutor living in Pakistan via Skype. Students will cover basic grammar and gain a working vocabulary. The course is open to beginners and intermediate Urdu speakers.  The language is presented in an economic, historical and cultural context so that learners are able to appreciate such things as appropriateness, linguistic etiquette, and the legacy of relations between Britain and Pakistan.</p>
+        <a href= "/languages/2" class="find-out-more">Find out more</a>
+      </div>
+    </div>
+  </div>
+</div>
