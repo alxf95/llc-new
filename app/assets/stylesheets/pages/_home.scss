@@ -21,11 +21,6 @@
   display: flex;
   align-items: center;
   width: 100%;
-  #typed-div {
-    position: relative;
-    bottom: 40px;
-    width: 300%;
-  }
 }
 
 #banner-sign-up {
@@ -35,7 +30,14 @@
 #map-home {
   max-width: 140%;
   height: auto;
-  margin-left: -125px;
+  margin-left: -120px;
+}
+
+#typed-div {
+  position: relative;
+  right: 20px;
+  bottom: 40px;
+  width: 300%;
 }
 
 #typed {
@@ -48,8 +50,8 @@
 .typed-cursor {
   font-size: 25px;
   margin: 1.5px;
-  position: relative;
-  top: 2px;
+  // position: relative;
+  // top: 2px;
 }
 
 .arrow-container {
